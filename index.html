@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finance Group</title>
+     <!-- Agregar el favicon -->
+    <link rel="icon" href="./Imagenes/Logo Finance.jpeg" type="image/jpeg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+
+  <body>
+
+   <!-- HEADER -->
+<header>
+  <img src="./Imagenes/Logo Finance.jpeg" alt="Logo Finance Group" class="logo" />
+
+  <!-- Botón hamburguesa solo para celular -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav>
+      <ul id="nav-list">
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#quienes-somos">Quiénes Somos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#simulador">Simulador</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="./formulario.html">Formulario</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <!-- BIENVENIDA -->
+    <section id="inicio">
+      <h1>Bienvenidos a Finance Group</h1>
+      <p>Soluciones financieras confiables, rápidas y accesibles para vos.</p>
+    </section>
+
+    <!-- BLOG DE NOVEDADES -->
+   <section id="blog" class="seccion-clara">
+  <h2>📰 Novedades del Rubro</h2>
+
+  <div class="blog-card">
+    <h3>📌 Créditos con menos requisitos: ¿oportunidad o trampa?</h3>
+    <p class="fecha">13 de junio de 2025</p>
+    <p class="resumen">
+      Hoy muchas entidades ofrecen préstamos rápidos sin tanto papeleo. Te contamos los pro y contra antes de aceptar uno.
+    </p>
+  </div>
+
+  <div class="blog-card">
+    <h3>📈 El dólar y los préstamos: ¿conviene esperar?</h3>
+    <p class="fecha">10 de junio de 2025</p>
+    <p class="resumen">
+      Con la suba del dólar, te explicamos cómo impacta en las tasas y qué tener en cuenta si estás por pedir un crédito.
+    </p>
+  </div>
+
+  <div class="blog-card">
+    <h3>💡 Tip financiero: armá tu fondo de emergencia</h3>
+    <p class="fecha">5 de junio de 2025</p>
+    <p class="resumen">
+      Separar un pequeño monto todos los meses puede salvarte de endeudarte. Acá te explicamos cómo empezar paso a paso.
+    </p>
+  </div>
+</section>
+
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="quienes-somos">
+      <h2><i class="fas fa-users"></i> Quiénes Somos</h2>
+      <p>Somos un grupo de profesionales apasionados por brindar soluciones financieras confiables y accesibles para todas las personas. Nuestro objetivo es ayudarte a alcanzar tus metas económicas con transparencia y rapidez.</p>
+      <p>Contamos con años de experiencia en el sector y un compromiso absoluto con la satisfacción de nuestros clientes.</p>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+      <h2><i class="fas fa-credit-card"></i> Nuestros Servicios</h2>
+      <ul>
+        <li>💸 Préstamos semanales, quincenales y mensuales</li>
+        <li>📝 Asesoramiento personalizado</li>
+        <li>⏱️ Aprobación rápida y sin vueltas</li>
+        <li>📄 Mínimos requisitos</li>
+      </ul>
+    </section>
+
+    <!-- SIMULADOR DE CRÉDITO -->
+    <section id="simulador">
+      <h2><i class="fas fa-calculator"></i> Simulador de Crédito</h2>
+      <form id="simuladorForm">
+        <label for="monto">Monto ($):</label>
+        <!-- Cambiado a tipo text para permitir formateo automático -->
+        <input type="text" id="monto" required oninput="formatNumber(this)" placeholder="Escribe el monto" />
+
+        <label for="tipo">Tipo de crédito:</label>
+        <select id="tipo" required>
+          <option value="semana">Semanal</option>
+          <option value="quincena">Quincenal</option>
+          <option value="mes">Mensual</option>
+        </select>
+
+        <label for="cuotas">Cantidad de cuotas:</label>
+        <input type="number" id="cuotas" min="1" required />
+
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="resultado"></div>
+    </section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios" class="seccion-clara">
+  <h2><i class="fas fa-comments"></i> Testimonios</h2>
+
+  <div id="testimoniosList" class="contenedor-testimonios">
+
+    <div class="testimonio">
+      <div class="estrellas">⭐⭐⭐⭐⭐ <span style="color:#ccc;">(Excelente)</span></div>
+      <p>¡Todo fue súper claro y rápido! Muy buena atención y transparencia en todo momento.</p>
+      <p class="nombre">— Camila Rodríguez</p>
+    </div>
+
+    <div class="testimonio">
+      <div class="estrellas">⭐⭐⭐⭐ <span style="color:#ccc;">(Muy bueno)</span></div>
+      <p>El préstamo me ayudó justo cuando lo necesitaba. La atención fue muy buena, aunque podrían mejorar un poco la respuesta por WhatsApp.</p>
+      <p class="nombre">— Tomás Herrera</p>
+    </div>
+
+  </div> <!-- ✅ este es el correcto -->
+
+  <!-- Formulario -->
+  <form id="opinionesForm">
+    <h3>📝 DEJANOS TU OPINIÓN</h3>
+
+    <label for="nombre">Nombre y Apellido:</label>
+    <input type="text" id="nombre" required />
+
+    <label for="opinion">Tu opinión:</label>
+    <textarea id="opinion" required placeholder="Escribí tu comentario sobre nuestra atención. ¡Muchas Gracias! 😊"></textarea>
+
+    <label for="estrellas">Puntaje:</label>
+    <select id="estrellas" required>
+      <option value="5">⭐⭐⭐⭐⭐ (Excelente)</option>
+      <option value="4">⭐⭐⭐⭐ (Muy bueno)</option>
+      <option value="3">⭐⭐⭐ (Bueno)</option>
+      <option value="2">⭐⭐ (Regular)</option>
+      <option value="1">⭐ (Malo)</option>
+    </select>
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+
+<!-- PREGUNTAS FRECUENTES -->
+<section id="faq" class="faq-section">
+  <h2><i class="fas fa-question-circle"></i> Preguntas Frecuentes</h2>
+
+  <div class="faq-item">
+    <h3>¿Qué requisitos necesito para solicitar un crédito?</h3>
+    <p>Debés ser mayor de 18 años, tener DNI, y contar con ingresos comprobables.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿En cuánto tiempo recibiré una respuesta?</h3>
+    <p>Nos contactamos con vos dentro de las 24 a 48 hs hábiles.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Puedo cancelar el crédito antes del plazo?</h3>
+    <p>Sí, podés cancelarlo anticipadamente sin penalización.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Qué tipo de créditos ofrecen?</h3>
+    <p>Personales, para refacciones, emprendimientos y más. Consultanos según tu necesidad.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Cómo hago el seguimiento de mi solicitud?</h3>
+    <p>Completando el formulario, un asesor se pondrá en contacto con vos por WhatsApp para informarte el estado de tu trámite.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Dónde puedo pagar las cuotas?</h3>
+    <p>Podés abonar tus cuotas por transferencia bancaria, depósito o en efectivo, según el acuerdo con tu asesor.</p>
+  </div>
+</section>
+
+<!-- GALERÍA DE IMÁGENES -->
+<section id="galeria">
+  <h2><i class="fas fa-image"></i> Galería</h2>
+  <div class="galeria">
+    <div>
+      <img src="./Imagenes/Finance oficina 1.jpeg" alt="Imagen 1">
+      <p>Finance oficina</p>
+    </div>
+    <div>
+      <img src="./Imagenes/Clientes felices.jpeg" alt="Imagen 2">
+      <p>Clientes felices</p>
+    </div>
+    <div>
+      <img src="./Imagenes/Asesoramiento financiero.jpeg" alt="Imagen 3">
+      <p>Asesoramiento financiero</p>
+    </div>
+    <div>
+      <img src="./Imagenes/Logo Finance.jpeg" alt="Imagen 4">
+      <p>Logo Finance Group</p>
+    </div>
+  </div>
+</section>
+
+ <!-- ENVIAR CV -->
+<section id="trabajo" class="seccion-clara">
+  <h2>💼 Trabajá con Nosotros</h2>
+  <p>Si querés formar parte de nuestro equipo, mandanos tu nombre, email y adjuntá tu CV por WhatsApp.</p>
+  <a href="https://wa.me/5491122696510?text=Hola! Quiero postularme para trabajar con ustedes. Adjunto mi CV." target="_blank" class="boton-cv">
+  📨 Quiero sumarme al equipo
+</a>
+
+</section>
+
+ <!-- CONTACTO -->
+<section id="contacto" style="padding: 40px 20px;">
+  <!-- Cuadro QR -->
+  <div style="padding: 25px; background-color: #e9f7ef; border-radius: 15px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: 300px; margin: 0 auto 30px;">
+    <div style="font-size: 2.2rem; margin-bottom: 10px;">📲💬</div>
+    <p style="color: #155724; font-size: 1.2rem; font-weight: 700;">¡Escribinos directo por WhatsApp!</p>
+    <img 
+      src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://wa.me/5491122696510" 
+      alt="QR WhatsApp"
+      style="margin-top: 15px; border-radius: 10px; border: 4px solid #25D366;"
+    />
+    <p style="margin-top: 10px; color: #155724;">Escaneá este código con tu celu 📱</p>
+  </div>
+
+  <!-- Cuadro Contacto -->
+  <div style="padding: 25px; background-color: #f8f9fa; border-radius: 15px; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: 500px; margin: 0 auto;">
+    <h2 style="color: #155724; text-align: center; margin-bottom: 20px;"><i class="fas fa-address-book"></i> Contactanos</h2>
+    <ul style="list-style: none; padding-left: 0; color: #155724; font-size: 1rem;">
+      <li style="margin-bottom: 10px;"><i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> +54 9 112269-6510</li>
+      <li style="margin-bottom: 10px;"><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> 
+        <a href="https://wa.me/5491122696510" target="_blank" style="color: #25D366; text-decoration: none; font-weight: bold;">
+          Chatear con nosotros
+        </a>
+      </li>
+      <li style="margin-bottom: 10px;"><i class="fab fa-instagram"></i> <strong>Instagram:</strong> 
+        <a href="https://www.instagram.com/fiinancegroup" target="_blank" style="color: #C13584; text-decoration: none; font-weight: bold;">
+          @fiinancegroup
+        </a>
+      </li>
+      <li><i class="fas fa-envelope"></i> <strong>Email:</strong> 
+        <a href="mailto:finance.group025@gmail.com" style="color: #007bff; text-decoration: none; font-weight: bold;">
+          finance.group025@gmail.com
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<footer class="footer-custom">
+  <div class="footer-top">
+    <nav class="footer-nav">
+      <a href="#quienes-somos">Quiénes Somos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajo">Trabajá con Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#blog">Blog</a>
+    </nav>
+    <div class="footer-icons">
+      <a href="https://www.instagram.com/fiinancegroup" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5491122696510" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:finance.group025@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <img src="./Imagenes/Logo Finance.jpeg" alt="Logo Finance" class="footer-logo">
+    <p>@ Finance Group 2025 - Todos los derechos reservados</p>
+    <p><a href="#">Política de privacidad y cookies</a> - Sitio web creado por Ezequiel Martinez <a href="https://wa.me/5491138624698" target="_blank">📲</a></p>
+  </div>
+</footer>
+
+    <!-- Inclusión del archivo JS -->
+   <script src="./script.js"></script>
+
+  </body>
+</html>

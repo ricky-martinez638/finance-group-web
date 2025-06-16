@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Completa formulario</title>
+  <link rel="icon" href="./Imagenes/Logo Finance.jpeg" type="image/jpeg" />
+  <link rel="stylesheet" href="./styles.css" />
+  <!-- Font Awesome bien cargado -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Botón Volver al inicio -->
+  <a href="./index.html" id="volver-al-inicio">
+    <i class="fas fa-home"></i> Volver al inicio
+  </a>
+
+  <!-- FORMULARIO DE SOLICITUD -->
+  <section id="formulario">
+    <h2><i class="fas fa-file-alt"></i> Solicitud de Crédito</h2>
+    <form id="whatsappForm" method="POST">
+      <!-- DATOS PERSONALES -->
+      <fieldset class="datos-personales">
+        <legend>Datos personales</legend>
+
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" required>
+
+        <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      </fieldset>
+
+      <!-- DATOS LABORALES -->
+      <fieldset class="datos-laborales">
+        <legend>Datos laborales</legend>
+
+        <label for="ocupacion">Ocupación:</label>
+        <input type="text" id="ocupacion" name="ocupacion" required>
+
+        <label for="ingresos">Ingresos mensuales aproximados:</label>
+        <input type="text" id="ingresos" name="ingresos" required>
+
+        <label for="tipo-empleo">Tipo de empleo:</label>
+        <select id="tipo-empleo" name="tipo-empleo" required>
+          <option value="">Seleccionar...</option>
+          <option value="relacion-dependencia">Relación de dependencia</option>
+          <option value="monotributista">Monotributista</option>
+          <option value="autonomo">Autónomo</option>
+          <option value="informal">Informal</option>
+          <option value="desempleado">Desempleado</option>
+        </select>
+      </fieldset>
+
+      <!-- COMENTARIOS -->
+      <label for="comentarios">Comentarios o detalles adicionales:</label>
+      <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+      <!-- BOTÓN DE ENVÍO -->
+      <div class="boton-whatsapp">
+        <button type="submit">
+          <i class="fab fa-whatsapp"></i> Confirmar solicitud
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <footer class="footer-custom">
+  <div class="footer-top">
+    <nav class="footer-nav">
+      <a href="#quienes-somos">Quiénes Somos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajo">Trabajá con Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#blog">Blog</a>
+    </nav>
+    <div class="footer-icons">
+      <a href="https://www.instagram.com/fiinancegroup" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5491138624698" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:finance.group025@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <img src="./Imagenes/Logo Finance.jpeg" alt="Logo Finance" class="footer-logo">
+    <p>@ Finance Group 2025 - Todos los derechos reservados</p>
+    <p><a href="#">Política de privacidad y cookies</a> - Sitio web creado por Ezequiel Martinez <a href="https://wa.me/5491138624698" target="_blank">📲</a></p>
+  </div>
+</footer>
+
+
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
