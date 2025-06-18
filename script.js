@@ -38,6 +38,7 @@ if (simuladorForm) {
       if (cuotas <= 4) tasaInteres = 125;
       else if (cuotas <= 6) tasaInteres = 155;
       else if (cuotas <= 8) tasaInteres = 176;
+      else if (cuotas <= 12) tasaInteres = 195;
       else {
         alert('Cantidad de quincenas no válida.');
         return;
@@ -133,7 +134,7 @@ if (whatsappForm) {
   `🗒️ *Comentarios:* ${comentarios}\n\n` +
   `${resumenSimulacion}`;
 
-    const url = `https://web.whatsapp.com/send?phone=5491122696510&text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/5491122696510?text=${encodeURIComponent(mensaje)}`;
     const win = window.open(url, "_blank");
     if (win) {
       setTimeout(() => window.location.href = "gracias.html", 1500);
