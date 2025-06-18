@@ -58,7 +58,7 @@ if (simuladorForm) {
     cuotaValor = montoTotal / cuotas;
 
     resumenSimulacion = 
-      `📊 *Resultado de la simulación:*\n` +
+      `*RESULTADO DE LA SIMULACIÓN:*\n` +
       `*Crédito solicitado:* $${monto.toLocaleString("es-AR")}\n` +
       `*Tipo:* ${tipo.charAt(0).toUpperCase() + tipo.slice(1)}\n` +
       `*Cuotas:* ${cuotas} de $${cuotaValor.toLocaleString("es-AR")}\n` +
@@ -88,15 +88,6 @@ if (simuladorForm) {
   }
 }
 
-// ========== MOSTRAR RESULTADO EN FORMULARIO ==========
-window.addEventListener("load", function () {
-  const resumen = localStorage.getItem("resumenSimulacion");
-  const resumenDiv = document.getElementById("resumen-simulacion");
-  if (resumen && resumenDiv) {
-    resumenDiv.innerText = resumen;
-  }
-});
-
 // ========== ENVÍO DE DATOS A WHATSAPP ==========
 const whatsappForm = document.getElementById("whatsappForm");
 if (whatsappForm) {
@@ -120,21 +111,23 @@ if (whatsappForm) {
     const comentarios = document.getElementById("comentarios").value;
 
     const mensaje =
-  `📝 *Solicitud de Crédito:*\n\n` +
-  `👤 *Datos Personales:*\n` +
-  `📛 *Nombre:* ${nombre}\n` +
-  `🆔 *DNI:* ${dni}\n` +
-  `🎂 *Fecha de nacimiento:* ${fecha}\n` +
-  `📞 *Teléfono:* ${telefono}\n` +
-  `📧 *Email:* ${email}\n\n` +
-  `💼 *Datos Laborales:*\n` +
-  `🛠️ *Ocupación:* ${ocupacion}\n` +
-  `💰 *Ingresos:* $${parseFloat(ingresos.replace(/\./g, '').replace(',', '.')).toLocaleString("es-AR")}\n` +
-  `📂 *Tipo de empleo:* ${tipoEmpleo}\n` +
-  `🗒️ *Comentarios:* ${comentarios}\n\n` +
-  `${resumenSimulacion}`;
+  "*SOLICITUD DE CRÉDITO*\n\n" +
+  "*DATOS PERSONALES:*\n" +
+  "*Nombre:* " + nombre + "\n" +
+  "*DNI:* " + dni + "\n" +
+  "*Fecha de nacimiento:* " + fecha + "\n" +
+  "*Teléfono:* " + telefono + "\n" +
+  "*Email:* " + email + "\n\n" +
+  "*DATOS LABORALES:*\n" +
+  "*Ocupación:* " + ocupacion + "\n" +
+  "*Ingresos:* $" + parseFloat(ingresos.replace(/\./g, '').replace(',', '.')).toLocaleString("es-AR") + "\n" +
+  "*Tipo de empleo:* " + tipoEmpleo + "\n" +
+  "*Comentarios:* " + comentarios + "\n\n" +
+  resumenSimulacion;
+
 
     const url = `https://wa.me/5491122696510?text=${encodeURIComponent(mensaje)}`;
+
     const win = window.open(url, "_blank");
     if (win) {
       setTimeout(() => window.location.href = "gracias.html", 1500);
@@ -143,6 +136,7 @@ if (whatsappForm) {
     }
   });
 }
+
 
 // ========== TESTIMONIOS CON FORMULARIO ==========
 document.addEventListener("DOMContentLoaded", () => {
