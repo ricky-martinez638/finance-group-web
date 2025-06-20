@@ -914,11 +914,11 @@ form#opinionesForm button {
 }
 
 #simulador-form button {
-  width: 90%;
-  max-width: 300px;
+  width: 85%;
+  max-width: 280px;
   margin: 10px 0;
-  padding: 12px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 15px;
 }
 
 /* Para que los botones estén uno al lado del otro en pantallas grandes */
@@ -930,8 +930,28 @@ form#opinionesForm button {
 
   #simulador-form button {
     margin: 0 10px;
+    font-size: 16px;
+    padding: 12px;
   }
 }
+
+.boton-formulario {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-formulario:hover {
+  background-color: #128C7E;
+}
+
+
 
 
 
